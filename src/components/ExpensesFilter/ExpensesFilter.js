@@ -8,8 +8,6 @@ const ExpensesFilter = (props) => {
 // const [filteredYear, setFilteredYear] = useState('2020');
 
 const dropdownChangeHandler = (event) => {
-  // setFilteredYear(event.target.value);
-  // console.log(event.target.value);
   props.onFilterYearChange(event.target.value);
 }
 
@@ -18,6 +16,8 @@ const dropdownChangeHandler = (event) => {
       <div className='expenses-filter__control'>
         <label>Filter by year</label>
         <select onChange={dropdownChangeHandler} value={props.selectedFilterYear}>
+          <option value='2022'>2024</option>
+          <option value='2022'>2023</option>
           <option value='2022'>2022</option>
           <option value='2021'>2021</option>
           <option value='2020'>2020</option>
